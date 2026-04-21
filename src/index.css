@@ -51,7 +51,7 @@ main {
   height: 100dvh;
 }
 
-section[aria-labelledby="rating-form"] {
+[aria-labelledby="rating-heading"] {
   padding: var(--space-4) var(--space-3);
   max-width: var(--max-width);
   border-radius: var(--space-2);
@@ -145,7 +145,7 @@ section[aria-labelledby="rating-form"] {
   }
 }
 
-section[aria-describedby="toast-heading"] {
+[aria-labelledby="toast-heading"] {
   padding: var(--space-4) var(--space-3);
   max-width: var(--max-width);
   border-radius: var(--space-2);
@@ -175,4 +175,13 @@ section[aria-describedby="toast-heading"] {
   p {
     color: var(--grey-500);
   }
+}
+
+[aria-hidden="true"] {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
