@@ -29,6 +29,7 @@
     15px + (100vw - 375px) * (18 - 15) / (1440 - 375),
     18px
   );
+  --outline: 0.1em solid var(--white);
 }
 
 body {
@@ -51,6 +52,7 @@ main {
 
 section[aria-labelledby="rating-form"] {
   padding: var(--space-4) var(--space-3);
+  max-width: 26em;
   border-radius: var(--space-2);
   background-color: var(--grey-900);
 
@@ -97,10 +99,25 @@ section[aria-labelledby="rating-form"] {
       font-weight: 700;
       background-color: hsl(from var(--grey-500) h s l / 12.5%);
       color: var(--grey-500);
+      cursor: pointer;
 
       input {
         position: absolute;
-        opacity: 0;
+        z-index: -1;
+      }
+
+      &:has(input:focus) {
+        outline: var(--outline);
+      }
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--grey-900);
+      }
+
+      &:has(input:checked) {
+        background-color: var(--orange-500);
+        color: var(--grey-900);
       }
     }
 
@@ -113,6 +130,16 @@ section[aria-labelledby="rating-form"] {
       letter-spacing: var(--space-1);
       background-color: var(--orange-500);
       color: var(--grey-900);
+      cursor: pointer;
+
+      &:focus {
+        outline: var(--outline);
+      }
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--grey-900);
+      }
     }
   }
 }
