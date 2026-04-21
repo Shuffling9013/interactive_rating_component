@@ -20,10 +20,99 @@
   --grey-500: hsl(217, 12%, 63%);
   --grey-900: hsl(213, 19%, 18%);
   --grey-950: hsl(216, 12%, 8%);
+  --space-1: 0.125em;
+  --space-2: 0.875em;
+  --space-3: 1.75em;
+  --space-4: 2.5em;
+  --font-size: clamp(
+    15px,
+    15px + (100vw - 375px) * (18 - 15) / (1440 - 375),
+    18px
+  );
 }
 
 body {
+  font-weight: 400;
+  font-size: var(--font-size);
+  line-height: 1.5;
   font-family: Overpass, Arial, Helvetica, sans-serif;
-  background-color: var(--grey-900);
+  background-color: var(--grey-950);
   color: var(--white);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-inline: var(--space-3);
+  height: 100dvh;
+}
+
+section[aria-labelledby="rating-form"] {
+  padding: var(--space-4) var(--space-3);
+  border-radius: var(--space-2);
+  background-color: var(--grey-900);
+
+  picture:has(img[alt="star"]) {
+    display: flex;
+    margin-block-end: var(--space-2);
+    width: var(--space-4);
+    height: var(--space-4);
+    border-radius: 100%;
+    background-color: hsl(from var(--grey-500) h s l / 12.5%);
+
+    img {
+      margin: auto;
+      width: var(--space-2);
+      height: var(--space-2);
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 1.75em;
+  }
+
+  p {
+    margin-block: var(--space-2);
+    color: var(--grey-500);
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-block-start: var(--space-3);
+
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--space-4);
+      height: var(--space-4);
+      border-radius: 100%;
+      position: relative;
+      font-weight: 700;
+      background-color: hsl(from var(--grey-500) h s l / 12.5%);
+      color: var(--grey-500);
+
+      input {
+        position: absolute;
+        opacity: 0;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: var(--space-4);
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: var(--space-1);
+      background-color: var(--orange-500);
+      color: var(--grey-900);
+    }
+  }
 }

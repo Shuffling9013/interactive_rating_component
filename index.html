@@ -15,6 +15,29 @@
     <script src="./src/index.ts"></script>
   </head>
   <body>
-    <main>main</main>
+    <main>
+      <section aria-labelledby="rating-form">
+        <header>
+          <picture>
+            <img src="./assets/images/icon-star.svg" alt="star" />
+          </picture>
+          <h1 id="rating-form">How did we do?</h1>
+        </header>
+
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <form>
+          <label>1<input type="radio" name="rating" value="1" /></label>
+          <label>2<input type="radio" name="rating" value="2" /></label>
+          <label>3<input type="radio" name="rating" value="3" /></label>
+          <label>4<input type="radio" name="rating" value="4" /></label>
+          <label>5<input type="radio" name="rating" value="5" /></label>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
