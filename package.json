@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "interactive-rating-component",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "fmt": "eslint . && prettier -w ."
+  },
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.0",
+    "vite": "^8.0.9"
+  }
+}
