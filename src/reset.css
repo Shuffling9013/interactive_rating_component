@@ -14,3 +14,9 @@ h5,
 h6 {
   font: inherit;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

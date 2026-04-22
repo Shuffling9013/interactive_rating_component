@@ -47,7 +47,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-inline: var(--space-3);
+  padding-inline: var(--space-2);
   height: 100dvh;
 }
 
@@ -101,6 +101,7 @@ main {
       background-color: hsl(from var(--grey-500) h s l / 12.5%);
       color: var(--grey-500);
       cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
 
       input {
         position: absolute;
@@ -132,6 +133,7 @@ main {
       background-color: var(--orange-500);
       color: var(--grey-900);
       cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
 
       &:focus {
         outline: var(--outline);
@@ -183,5 +185,6 @@ main {
   width: 0;
   height: 0;
   opacity: 0;
+  overflow: hidden;
   visibility: hidden;
 }
